@@ -284,7 +284,7 @@ function RetrieveSchedule(firstSelection = null) {
         mm = currDate.getMonth();
 
     let firstDay = new Date(yyyy, mm, 1).toISOString();
-    firstDay = firstDay.substring(0, 7);
+    firstDay = firstDay.substring(0, 10);
 
     let lastDay = new Date(yyyy, mm + 1, 0).toISOString();
     lastDay = lastDay.substring(0, lastDay.indexOf("T"));
