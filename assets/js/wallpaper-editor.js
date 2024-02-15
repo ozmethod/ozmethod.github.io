@@ -392,11 +392,11 @@ function BuildSchedule(scheduleArr = null) {
             let timeMin = (currScheduleObj.date.minute < 10 ? "0" + currScheduleObj.date.minute : currScheduleObj.date.minute);
             currScheduleObj.date.dateText = timeHour + ":" + timeMin;
 
-            currScheduleObj.home = (currGame.home.Team.id == selectedTeam.id);
+            currScheduleObj.home = (currGame.teams.home.Team.id == selectedTeam.id);
 
             let opponent = (currScheduleObj.home ?
-                currGame.awayTeam :
-                currGame.homeTeam);
+                currGame.teams.away.Team :
+                currGame.teams.home.Team);
 
             let opponentObj = selectedLeague.teams.find(team => team.id == opponent.id);
 
