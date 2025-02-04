@@ -399,11 +399,11 @@ function BuildSchedule(scheduleArr = null) {
                 currGame.teams.away.team :
                 currGame.teams.home.team);
             } else {
-                currScheduleObj.home = (currGame.hometeam.id == selectedTeam.id);
+                currScheduleObj.home = (currGame.homeTeam.id == selectedTeam.id);
 
                     opponent = (currScheduleObj.home ?
-                    currGame.awayteam :
-                    currGame.hometeam);
+                    currGame.awayTeam :
+                    currGame.homeTeam);
             }
 
             let opponentObj = selectedLeague.teams.find(team => team.id == opponent.id);
