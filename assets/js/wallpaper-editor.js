@@ -385,6 +385,7 @@ function BuildSchedule(scheduleArr = null) {
 
         scheduleArr.forEach(currGame => {
             let currScheduleObj = {};
+            let currScheduleObjspare = {};
 
             currScheduleObj.date = TZIntl.getDateTime(timeZone_Val, currGame.gameDate);
 
